@@ -25,15 +25,17 @@
 ### Screenshots
 <img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px"   > 
 <img src="https://user-images.githubusercontent.com/5example.png" height="100px" width="100px"  >
----
 
-## Here are my social media handles:
 
-Linkedin: https://www.linkedin.com/in/falansh-siddh/
-Project Video Link: --
-<br />
-Instagram: --
+## Related Links:
+Project Video Link: https://www.linkedin.com/feed/update/urn:li:activity:6795341183796178944/ <br />
+Live Link: https://fsiddh.github.io/Jira-Task-Manager/
 
 ###### Email: falansh.rs@gmail.com
 
 ### Thank you!
+<p align ="center">
+  <a href="https://www.linkedin.com/in/falansh-siddh/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" style="background-color:white;" height="30"      width="30"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="Soon" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" height="30" width="30"></a>
+</p>
