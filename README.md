@@ -13,7 +13,7 @@
 - Formatting - font, size, bold, italic, underline, color, background color, position.
 - WorkBook ie Add N sheets
 
-<img src="https://user-images.githubusercontent.com/57831888/102913495-d68fb680-44a4-11eb-8d2f-4e656ed66b4d.png" width="600px">
+<img src="https://user-images.githubusercontent.com/example.png" width="600px">
 
 # 🚀 Technical Stack:
 
@@ -25,15 +25,16 @@
 
 
 ### Screenshots
-<img src="https://user-images.githubusercontent.com/57831888/102913495-d68fb680-44a4-11eb-8d2f-4e656ed66b4d.png" width="400px"   > <img src="https://user-images.githubusercontent.com/57831888/102913487-d4c5f300-44a4-11eb-8efd-5469bf74305e.png" width="400px"  align="right" >
+<img src="https://user-images.githubusercontent.com/example.png" width="400px"   > 
+<img src="https://user-images.githubusercontent.com/5example.png" width="400px"  align="right" >
 ---
 
 ## Here are my social media handles:
 
-Linkedin: https://www.linkedin.com/in/architgarg603/
+Linkedin: https://www.linkedin.com/in/falansh-siddh/
 <br />
-Instagram: https://www.instagram.com/_archit.garg_/
+Instagram: --
 
-###### Email: architgarg603@gmail.com
+###### Email: falansh.rs@gmail.com
 
 ### Thank you!
