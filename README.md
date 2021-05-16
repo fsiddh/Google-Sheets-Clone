@@ -28,8 +28,8 @@
 
 
 ## Related Links:
-Project Video Link: https://www.linkedin.com/feed/update/urn:li:activity:6795341183796178944/ <br />
-Live Link: https://fsiddh.github.io/Jira-Task-Manager/
+Project Video Link: ... <br />
+Live Link: ...
 
 ###### Email: falansh.rs@gmail.com
 
