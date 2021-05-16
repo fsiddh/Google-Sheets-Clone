@@ -4,14 +4,14 @@
 
 # Description:
 
-### Sheets clone is built using electron framework with technologies such as HTML CSS Javascript and Ejs as a templating engine .
+### Sheets clone is built using technologies such as HTML CSS and Javascript.
 ### Some features of this project are -
 - Change Cell size
-- Cycle Detection in formula
+- Cycle Detection(if any)
 - Evaluate Formula using Stack;
 - New, Open, Save functionality
 - Formatting - font, size, bold, italic, underline, color, background color, position.
-- WorkBook ie Add N sheets
+- Adding Multiple sheets
 
 <img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px" >
 
@@ -19,8 +19,6 @@
 
 ## Frontend:
 - Programming Language: Javascript
-- Framework: Electrom
-- Templating Engine: Ejs
 - IDE: VScode
 
 
