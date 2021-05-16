@@ -26,7 +26,7 @@
 
 ### Screenshots
 <img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px"   > 
-<img src="https://user-images.githubusercontent.com/5example.png" height="100px" width="100px"  align="right" >
+<img src="https://user-images.githubusercontent.com/5example.png" height="100px" width="100px"  >
 ---
 
 ## Here are my social media handles:
