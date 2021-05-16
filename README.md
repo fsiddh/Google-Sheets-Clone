@@ -13,7 +13,7 @@
 - Formatting - font, size, bold, italic, underline, color, background color, position.
 - WorkBook ie Add N sheets
 
-<img src="https://user-images.githubusercontent.com/example.png" width="600px">
+<img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px" >
 
 # 🚀 Technical Stack:
 
@@ -25,13 +25,14 @@
 
 
 ### Screenshots
-<img src="https://user-images.githubusercontent.com/example.png" width="400px"   > 
-<img src="https://user-images.githubusercontent.com/5example.png" width="400px"  align="right" >
+<img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px"   > 
+<img src="https://user-images.githubusercontent.com/5example.png" height="100px" width="100px"  align="right" >
 ---
 
 ## Here are my social media handles:
 
 Linkedin: https://www.linkedin.com/in/falansh-siddh/
+Project Video Link: --
 <br />
 Instagram: --
 
