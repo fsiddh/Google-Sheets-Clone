@@ -11,6 +11,9 @@ let boldBtn = document.querySelector(".bold");
 let underlineBtn = document.querySelector(".underline");
 let italicBtn = document.querySelector(".italic");
 
+let fontColorBtn = document.querySelector(".color");
+let cellColorBtn = document.querySelector(".bg-color");
+
 let leftBtn = document.querySelector(".left");
 let centerBtn = document.querySelector(".center");
 let rightBtn = document.querySelector(".right");
@@ -39,7 +42,7 @@ addBtnContainer.addEventListener("click", function () {
 	newSheet.setAttribute("class", "sheet");
 	newSheet.setAttribute("sheetIdx", idx + 1);
 	//style="cursor: pointer"
-	newSheet.setAttribute("style", "cursor: pointer"); 
+	newSheet.setAttribute("style", "cursor: pointer");
 	newSheet.innerText = `Sheet ${idx + 1}`;
 
 	// Add new Sheet in sheet list
@@ -153,29 +156,28 @@ for (let i = 0; i < allCells.length; i++) {
 	});
 
 	allCells[i].addEventListener("keydown", function (e) {
-        // returns height of the cell
-        let obj = allCells[i].getBoundingClientRect();
-        let height = obj.height;
-        let address = addressBar.value; //A1
-        let { rid, cid } = getRIdCIdfromAddress(address); //00
+		// returns height of the cell
+		let obj = allCells[i].getBoundingClientRect();
+		let height = obj.height;
+		let address = addressBar.value; //A1
+		let { rid, cid } = getRIdCIdfromAddress(address); //00
 		let leftCol = document.querySelectorAll(".left-col .left-col_box");
 		leftCol = leftCol[rid];
-        leftCol.style.height = height + "px";
-    });
+		leftCol.style.height = height + "px";
+	});
 }
 
 gridContainer.addEventListener("scroll", function () {
-    // console.log(e);
-    let top = gridContainer.scrollTop;
-    let left = gridContainer.scrollLeft;
-    // console.log(top);
-    // console.log(left);
-    topLeftBlock.style.top = top + "px";
-    topRow.style.top = top + "px";
-    leftCol.style.left = left + "px";
-    topLeftBlock.style.left = left + "px";
-})
-
+	// console.log(e);
+	let top = gridContainer.scrollTop;
+	let left = gridContainer.scrollLeft;
+	// console.log(top);
+	// console.log(left);
+	topLeftBlock.style.top = top + "px";
+	topRow.style.top = top + "px";
+	leftCol.style.left = left + "px";
+	topLeftBlock.style.left = left + "px";
+});
 
 // Bydefault Page render -> first cell's address -> shows on Address Bar
 allCells[0].click();
@@ -203,6 +205,10 @@ boldBtn.addEventListener("click", handleBUI);
 underlineBtn.addEventListener("click", handleBUI);
 // Italic
 italicBtn.addEventListener("click", handleBUI);
+
+// Font Color and Cell Color
+// fontColorBtn.addEventListener("click", handleColor);
+// cellColorBtn.addEventListener("click", handleColor);
 
 // ====HELPING FUNCTIONS======================================================================================================
 // All Re-Usable Functions (fns which are used above)
@@ -242,6 +248,7 @@ function setUI(sheetDB) {
 			cell.style.textAlign = cellData.halign;
 
 			cell.innerText = cellData.value;
+			// console.log(cellData.value);
 		}
 	}
 }
@@ -314,6 +321,24 @@ function handleBUI(e) {
 		}
 	}
 }
+
+// Handles color of font and of a cell
+// function handleColor(e) {
+// 	let myClass = e.currentTarget.getAttribute("class");
+// 	console.log(myClass);
+
+// 	let address = addressBar.value;
+// 	let { rid, cid } = getRIdCIdfromAddress(address);
+// 	let cellElem = document.querySelector(`.col[rid="${rid}"][cid="${cid}"]`);
+
+// 	if (myClass == "color") {
+// 		let fontColor = document.getElementById("fontColorButton").value;
+// 		cellElem.style.color = fontColor;
+// 	} else {
+// 		let cellColor = document.getElementById("bgColorButton").value;
+// 		cellElem.style.backgroundColor = cellColor;
+// 	}
+// }
 
 // Handles font family of selected cell
 function handleFontFamily(e) {
