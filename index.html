@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Broswer Excel</title>
+		<title>Google Sheet</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -12,49 +12,92 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<div class="nos-container">
+			<div class="new" style="cursor: pointer">New</div>
+			<div class="open" style="cursor: pointer">Open</div>
+			<div class="download" style="cursor: pointer">Save</div>
+		</div>
 		<div class="menu-container">
-			<div class="formatting-container">
-				<div class="subgroup">
-					<select id="font-family" class="font-family">
-						<option value="Arial">Arial</option>
-						<option value="Cambria">Cambria</option>
-						<option value="Georgia">Georgia</option>
-						<option value="Monospace">Monospace</option>
-						<option value="Sans-Serif">Sans-Serif</option>
-						<option value="Fantasy">Fantasy</option>
-					</select>
-					<div class="BUI_container">
-						<input type="button" value="B" class="bold " style="cursor: pointer"/>
-						<input type="button" value="U" class="underline" style="cursor: pointer"/>
-						<input type="button" value="I" class="italic" style="cursor: pointer"/>
+			<div class="font-container">
+				<select id="font-family" class="font-family">
+					<option value="Arial">Arial</option>
+					<option value="Cambria">Cambria</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Monospace">Monospace</option>
+					<option value="Sans-Serif">Sans-Serif</option>
+					<option value="Fantasy">Fantasy</option>
+				</select>
+			</div>
+			<div class="fontSize-container">
+				<select id="font-size" class="font-size">
+					<option value="8">8</option>
+					<option value="10">10</option>
+					<option value="12">12</option>
+					<option value="16">16</option>
+					<option value="20">20</option>
+					<option value="32">32</option>
+				</select>
+			</div>
+			<div class="BUIC-container">
+				<div class="BUI_container">
+					<div class="bold" style="cursor: pointer">
+						<i class="fas fa-bold"></i>
+					</div>
+
+					<div class="underline" style="cursor: pointer">
+						<i class="fas fa-underline"></i>
+					</div>
+
+					<div class="italic" style="cursor: pointer">
+						<i class="fas fa-italic"></i>
 					</div>
 				</div>
-				<div class="subgroup">
-					<select id="font-size" class="font-size">
-						<option value="8">8</option>
-						<option value="10">10</option>
-						<option value="12">12</option>
-						<option value="16">16</option>
-						<option value="20">20</option>
-						<option value="32">32</option>
-					</select>
-					<div class="color-container">
-						<input type="color" id="color" style="cursor: pointer"/>
-						<input type="color" id="bg-color" style="cursor: pointer"/>
+				<div class="color-container">
+					<input
+						type="color"
+						style="display: none"
+						id="fontColorButton"
+						title="Change Font Color"
+					/>
+					<div
+						class="color"
+						style="cursor: pointer"
+						onclick="myFontFunction()"
+					>
+						<i class="fas fa-font"></i></i>
+					</div>
+
+
+					<input
+						type="color"
+						style="display: none"
+						id="bgColorButton"
+						title="Change bg Color"
+					/>
+					<div
+						class="bg-color"
+						style="cursor: pointer"
+						onclick="myBGFunction()"
+					>
+						<i class="fas fa-fill-drip"></i>
 					</div>
 				</div>
 			</div>
 			<div class="alignment-container">
-				<input type="button" value="L" class="left" style="cursor: pointer"/>
-				<input type="button" value="C" class="center" style="cursor: pointer"/>
-				<input type="button" value="R" class="right" style="cursor: pointer"/>
+
+				<div class="left" style="cursor: pointer">
+					<i class="fas fa-align-left"></i>
+				</div>
+
+				<div class="center" style="cursor: pointer">
+					<i class="fas fa-align-center"></i>
+				</div>
+
+				<div class="right" style="cursor: pointer">
+					<i class="fas fa-align-right"></i>
+				</div>
+
 			</div>
-			<div class="nos-container">
-				<i class="far fa-envelope-open open" style="cursor: pointer"></i>
-				<i class="fas fa-plus-circle new" style="cursor: pointer"></i>
-				<i class="fas fa-file-download download" style="cursor: pointer"></i>
-			</div>
-			
 		</div>
 		<div class="formula-container">
 			<input type="text" class="address-box" readonly />
@@ -73,7 +116,13 @@
 			</div>
 
 			<div class="sheets-list">
-				<div class="sheet active-sheet" sheetIdx="1" style="cursor: pointer">Sheet 1</div>
+				<div
+					class="sheet active-sheet"
+					sheetIdx="1"
+					style="cursor: pointer"
+				>
+					Sheet 1
+				</div>
 			</div>
 		</div>
 
@@ -81,5 +130,14 @@
 		<script src="./script.js"></script>
 		<script src="./formulaBar.js"></script>
 		<script src="./new_open_save.js"></script>
+
+		<script>
+			function myBGFunction() {
+				document.getElementById("bgColorButton").click();
+			}
+			function myFontFunction() {
+				document.getElementById("fontColorButton").click();
+			}
+		</script>
 	</body>
 </html>

@@ -1,16 +1,16 @@
-let download = document.querySelector(".download");
+let save = document.querySelector(".download");
 let clear = document.querySelector(".new");
 
 // SAVE
 // <a href = "www.google.com" download="file.json"></a>
-download.addEventListener("click", function () {
+save.addEventListener("click", function () {
 	const data = JSON.stringify(workSheetDb);
 	// blob
 	// excel -> npm xlsx hw
 	const blob = new Blob([data], { type: "application/json" }); // converts data to file of this type
 	const url = window.URL.createObjectURL(blob); // creates file to url
-	const jsonData = JSON.parse(data);
-	const xls = json2xls(jsonData);
+	// const jsonData = JSON.parse(data);
+	// const xls = json2xls(jsonData);
 	// download btn
 	let a = document.createElement("a");
 	// download
@@ -38,7 +38,6 @@ download.addEventListener("click", function () {
 
 // NEW
 // ui empty ->worksheetDB empty
-
 clear.addEventListener("click", function (e) {
 	// console.log(sheetDB);
 	initUI();

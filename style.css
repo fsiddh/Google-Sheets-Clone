@@ -125,14 +125,28 @@ body {
 }
 /* ==================== GRID CSS ENDS =====================*/
 
+/* ==================== NOS ENDS =====================*/
+.nos-container {
+	height: 30px;
+	background-color: #004e15da;
+	display: flex;
+	align-items: center;
+}
+.nos-container > * {
+	border-right: 2px solid rgba(211, 211, 211, 0.247);
+}
+/* ==================== NOS ENDS =====================*/
+
 /* ==================== Menu Container CSS Starts =====================*/
 .active-btn {
-	background-color: rgb(92, 92, 92);
+	background-color: rgba(16, 126, 12, 0.329);
+	color: darkgreen;
 }
 
 .menu-container {
-	background-color: #004e15da;
-	height: 80px;
+	background-color: rgba(255, 255, 255, 0.452);
+	border: 1px solid lightgray;
+	height: 40px;
 	display: flex;
 	align-items: center;
 }
@@ -140,59 +154,112 @@ body {
 .menu-container > * {
 	height: 80%;
 	width: 20%;
-	border-right: 2px solid rgba(211, 211, 211, 0.247);
+	border-right: 2px solid rgb(233, 233, 233);
+	color: rgba(0, 0, 0, 0.7);
+	/* border: 1px solid red; */
 }
 
-.formatting-container {
+.font-container {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+}
+.font-family {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	width: 70%;
+	border: 0px;
 }
 
-.subgroup {
+.fontSize-container {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 8%;
+}
+
+.font-size {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70%;
+	width: 70%;
+	border: 0px;
+}
+
+.BUIC-container {
+	display: flex;
 	justify-content: space-evenly;
-	width: 45%;
-	height: 100%;
-}
-
-.subgroup > * {
-	width: 100%;
+	align-items: center;
+	width: 15%;
+	/* border: 1px solid red; */
 }
 
 .BUI_container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	border-right: 2px solid rgb(233, 233, 233);
+	/* border: 1px solid red; */
 }
 
 .BUI_container > * {
-	width: 30%;
+	/* border: 1px solid red; */
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 1px;
 }
 
 .color-container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	/* border: 1px solid red; */
 }
 
 .color-container > * {
-	width: 45%;
+	/* border: 1px solid red; */
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 1px;
 }
 
 .alignment-container {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
+	width: 10%;
+	font-size: 20px;
+	/* border: 1px solid red; */
 }
-
 .alignment-container > * {
-	width: 20%;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 1px;
 }
 /* ==================== Menu Container CSS ENDS =====================*/
 
 /* ==================== Formula Container CSS Starts =====================*/
 
 .formula-container {
-	background-color: rgba(180, 180, 180, 0.452);
+	background-color: rgba(255, 255, 255, 0.452);
+	border: 1px solid lightgray;
 	height: 30px;
 	display: flex;
 	align-items: center;
