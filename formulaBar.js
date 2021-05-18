@@ -179,6 +179,7 @@ function checkCycle(address, newFormula) {
 				let parentAddress = formulaTokens[i]; // A1
 
 				if (parentAddress == childAddress) {
+					alert("Cycle Detected!!");
 					return true;
 				}
 			}
