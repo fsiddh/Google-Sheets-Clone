@@ -155,12 +155,15 @@ for (let i = 0; i < allCells.length; i++) {
 		formulaBarInput.value = cellObject.formula;
 	});
 
+	// Increase height of left col's resp. cell's height acc. to the text in it
 	allCells[i].addEventListener("keydown", function (e) {
 		// returns height of the cell
 		let obj = allCells[i].getBoundingClientRect();
 		let height = obj.height;
+
 		let address = addressBar.value; //A1
 		let { rid, cid } = getRIdCIdfromAddress(address); //00
+
 		let leftCol = document.querySelectorAll(".left-col .left-col_box");
 		leftCol = leftCol[rid];
 		leftCol.style.height = height + "px";
