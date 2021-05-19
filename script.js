@@ -444,4 +444,19 @@ function getRIdCIdfromAddress(address) {
 	rightBtn.addEventListener("mouseout", function () {
 		rightBtn.classList.remove("hover-active-btn");
 	})
+
+	// FONT FAMILY AND COLOR
+	// fontFamilyElem.addEventListener("mouseover", function () {
+	// 	fontFamilyElem.classList.add("hover-active-btn");
+	// })
+	// fontFamilyElem.addEventListener("mouseout", function () {
+	// 	fontFamilyElem.classList.remove("hover-active-btn");
+	// })
+
+	// fontSizeElem.addEventListener("mouseover", function () {
+	// 	fontSizeElem.classList.add("hover-active-btn");
+	// })
+	// fontSizeElem.addEventListener("mouseout", function () {
+	// 	fontSizeElem.classList.remove("hover-active-btn");
+	// })
 })();
