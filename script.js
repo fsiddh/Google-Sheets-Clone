@@ -385,3 +385,63 @@ function getRIdCIdfromAddress(address) {
 
 	return { rid, cid };
 }
+
+(function hoverEffect() {
+	//BUI
+	boldBtn.addEventListener("mouseover", function () {
+		boldBtn.classList.add("hover-active-btn");
+	})
+	boldBtn.addEventListener("mouseout", function () {
+		boldBtn.classList.remove("hover-active-btn");
+	})
+
+	underlineBtn.addEventListener("mouseover", function () {
+		underlineBtn.classList.add("hover-active-btn");
+	})
+	underlineBtn.addEventListener("mouseout", function () {
+		underlineBtn.classList.remove("hover-active-btn");
+	})
+
+	italicBtn.addEventListener("mouseover", function () {
+		italicBtn.classList.add("hover-active-btn");
+	})
+	italicBtn.addEventListener("mouseout", function () {
+		italicBtn.classList.remove("hover-active-btn");
+	})
+
+	// COLORS
+	fontColorBtn.addEventListener("mouseover", function () {
+		fontColorBtn.classList.add("hover-active-btn");
+	})
+	fontColorBtn.addEventListener("mouseout", function () {
+		fontColorBtn.classList.remove("hover-active-btn");
+	})
+
+	cellColorBtn.addEventListener("mouseover", function () {
+		cellColorBtn.classList.add("hover-active-btn");
+	})
+	cellColorBtn.addEventListener("mouseout", function () {
+		cellColorBtn.classList.remove("hover-active-btn");
+	})
+
+	// ALIGNMENT
+	leftBtn.addEventListener("mouseover", function () {
+		leftBtn.classList.add("hover-active-btn");
+	})
+	leftBtn.addEventListener("mouseout", function () {
+		leftBtn.classList.remove("hover-active-btn");
+	})
+	centerBtn.addEventListener("mouseover", function () {
+		centerBtn.classList.add("hover-active-btn");
+	})
+	centerBtn.addEventListener("mouseout", function () {
+		centerBtn.classList.remove("hover-active-btn");
+	})
+	
+	rightBtn.addEventListener("mouseover", function () {
+		rightBtn.classList.add("hover-active-btn");
+	})
+	rightBtn.addEventListener("mouseout", function () {
+		rightBtn.classList.remove("hover-active-btn");
+	})
+})();

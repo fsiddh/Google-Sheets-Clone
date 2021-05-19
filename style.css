@@ -4,7 +4,7 @@
 
 body {
 	margin: 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: "Raleway", sans-serif;
 	color: rgb(44, 44, 44);
 }
 
@@ -17,7 +17,7 @@ body {
 .sheets {
 	/* background-color: black; */
 	background-color: rgba(180, 180, 180, 0.452);
-	height: 40px;
+	height: 50px;
 	display: flex;
 }
 
@@ -38,6 +38,8 @@ body {
 	display: flex;
 	height: 100%;
 	overflow-x: auto;
+	justify-content: center;
+	align-items: center;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .sheets-list::-webkit-scrollbar {
@@ -52,11 +54,12 @@ body {
 
 .sheet {
 	min-width: 80px;
-	height: 100%;
+	height: 80%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-right: 2px solid rgb(211, 211, 211);
+	border-radius: 0.2rem;
 }
 
 .active-sheet {
@@ -129,16 +132,14 @@ body {
 }
 /* ==================== GRID CSS ENDS =====================*/
 
-
 /* ==================== MAIN CONTAINER CSS STARTS =====================*/
-.main_container{
+.main_container {
 	display: flex;
 }
 /* ==================== MAIN CONTAINER CSS ENDS =====================*/
 
-
 /* ==================== ICON CSS STARTS =====================*/
-.icon_container{
+.icon_container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -149,13 +150,11 @@ body {
 
 /* ==================== ICON CSS ENDS =====================*/
 
-
 /* ==================== NOS AND MENU CONTAINER STARTS =====================*/
-.nos_and_menu_container{
+.nos_and_menu_container {
 	width: 100%;
 }
 /* ==================== NOS AND MENU CONTAINER ENDS =====================*/
-
 
 /* ==================== NOS ENDS =====================*/
 
@@ -174,6 +173,10 @@ body {
 
 /* ==================== Menu Container CSS Starts =====================*/
 .active-btn {
+	background-color: rgba(16, 126, 12, 0.329);
+	color: darkgreen;
+}
+.hover-active-btn {
 	background-color: rgba(16, 126, 12, 0.329);
 	color: darkgreen;
 }
@@ -298,13 +301,13 @@ body {
 	height: 30px;
 	display: flex;
 	align-items: center;
-	justify-content:space-evenly;
+	justify-content: space-evenly;
 }
 
 .address-box {
 	width: 7.4%;
 	height: 80%;
-	border: 2px solid  rgb(233, 233, 233);
+	border: 2px solid rgb(233, 233, 233);
 	border-radius: 0.2rem;
 	padding-left: 1rem;
 	/* border-left: 0px;
@@ -314,10 +317,10 @@ body {
 }
 
 .seperator {
-	filter:drop-shadow(100%);
+	filter: drop-shadow(100%);
 }
 
-.fx{
+.fx {
 	/* border: 1px solid red; */
 	color: red;
 	opacity: 30%;
@@ -330,7 +333,7 @@ body {
 	height: 80%;
 	/* border: 1px solid lightgrey; */
 	padding-left: 1rem;
-	border: 2px solid  rgba(233, 233, 233);
+	border: 2px solid rgba(233, 233, 233);
 	border-top: 0px;
 	border-right: 0px;
 	border-bottom: 0px;
