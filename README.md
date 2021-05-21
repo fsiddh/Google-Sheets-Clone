@@ -29,7 +29,7 @@
 
 ## Related Links:
 Project Video Link: ... <br />
-Live Link: ...
+Live Link: https://fsiddh.github.io/Google-Sheets-Clone/
 
 ###### Email: falansh.rs@gmail.com
 
