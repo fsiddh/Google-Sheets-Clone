@@ -23,8 +23,8 @@
 
 
 ### Screenshots
-<img src="img/cycleDetected.PNG" height="300px" width="400px"   > 
-<img src="img/feautures.PNG" height="300px" width="400px"  align = "right">
+<img src="img/cycleDetected.PNG" height="600px" width="800px"    > 
+<img src="img/feautures.PNG" height="600px" width="800px"   align = "center">
 
 
 ## Related Links:
