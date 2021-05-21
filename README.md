@@ -13,7 +13,7 @@
 - Formatting - font, size, bold, italic, underline, color, background color, position.
 - Adding Multiple sheets
 
-<img src="img/default.PNG" height="100px" width="100px" >
+<img src="img/default.PNG" height="100" width="100" >
 
 # 🚀 Technical Stack:
 
@@ -23,8 +23,8 @@
 
 
 ### Screenshots
-<img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px"   > 
-<img src="https://user-images.githubusercontent.com/5example.png" height="100px" width="100px"  >
+<img src="img/cycleDetected.PNG" height="100px" width="100px"   > 
+<img src="img/features.PNG" height="100px" width="100px"  >
 
 
 ## Related Links:
