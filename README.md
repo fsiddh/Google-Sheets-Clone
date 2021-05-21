@@ -13,7 +13,7 @@
 - Formatting - font, size, bold, italic, underline, color, background color, position.
 - Adding Multiple sheets
 
-<img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px" >
+<img src="img/default.PNG" height="100px" width="100px" >
 
 # 🚀 Technical Stack:
 
