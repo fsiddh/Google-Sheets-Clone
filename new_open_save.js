@@ -53,6 +53,7 @@ clear.addEventListener("click", function (e) {
 	let newSheetDB = cleanSheetDB();
 	let activeSheet = document.querySelector(".active-sheet");
 	let sheetIdx = activeSheet.getAttribute("sheetidx") - 1;
+	sheetDB = newSheetDB;
 	workSheetDb[sheetIdx]= newSheetDB;
 });
 
