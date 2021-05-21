@@ -154,16 +154,16 @@ for (let i = 0; i < allCells.length; i++) {
 		// Formula Bar
 		formulaBarInput.value = cellObject.formula;
 	});
-	allCells[i].addEventListener("blur",function(){
+
+	// To update current cell's values in DB
+	// "blur"-> gives whole innerText of a cell, "click" and other gives only first few lettrs
+	allCells[i].addEventListener("blur", function () {
 		let rid = Number(allCells[i].getAttribute("rid"));
 		let cid = Number(allCells[i].getAttribute("cid"));
 
-		// Acc. to cell's prev state, update all Btns state
 		let cellObject = sheetDB[rid][cid];
-
 		cellObject.value = allCells[i].innerText;
-
-	})
+	});
 
 	// Increase height of left col's resp. cell's height acc. to the text in it
 	allCells[i].addEventListener("keydown", function (e) {
@@ -348,7 +348,6 @@ function handleColor(e) {
 	let { rid, cid } = getRIdCIdfromAddress(address);
 	let cellElem = document.querySelector(`.col[rid="${rid}"][cid="${cid}"]`);
 	let cellObject = sheetDB[rid][cid];
-
 
 	console.log(myClass);
 	if (myClass == "color") {
