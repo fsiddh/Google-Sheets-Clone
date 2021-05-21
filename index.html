@@ -65,30 +65,27 @@
 								type="color"
 								style="display: none"
 								id="fontColorButton"
+								class = "color"
 								title="Change Font Color"
 							/>
-							<div
-								class="color"
-								style="cursor: pointer"
-								onclick="myFontFunction()"
-							>
-								<i class="fas fa-font"></i></i>
-							</div>
-		
-		
+							<label class="color"
+							style="cursor: pointer"
+							for="fontColorButton">
+							<i class="fas fa-font"></i>
+							</label>
+							
 							<input
 								type="color"
 								style="display: none"
 								id="bgColorButton"
+								class="bg-color"
 								title="Change bg Color"
 							/>
-							<div
-								class="bg-color"
-								style="cursor: pointer"
-								onclick="myBGFunction()"
-							>
-								<i class="fas fa-fill-drip"></i>
-							</div>
+							<label class="bg-color"
+							style="cursor: pointer"
+							for="bgColorButton">
+							<i class="fas fa-fill-drip"></i>
+							</label>
 						</div>
 					</div>
 					<div class="alignment-container">
@@ -144,12 +141,6 @@
 		<script src="./new_open_save.js"></script>
 
 		<script>
-			function myBGFunction() {
-				document.getElementById("bgColorButton").click();
-			}
-			function myFontFunction() {
-				document.getElementById("fontColorButton").click();
-			}
 			function myOpenFunction() {
 				document.getElementById("inputButton").click();
 			}

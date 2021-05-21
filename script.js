@@ -11,8 +11,8 @@ let boldBtn = document.querySelector(".bold");
 let underlineBtn = document.querySelector(".underline");
 let italicBtn = document.querySelector(".italic");
 
-let fontColorBtn = document.querySelector(".color");
-let cellColorBtn = document.querySelector(".bg-color");
+let fontColorBtn = document.querySelector("#fontColorButton");
+let cellColorBtn = document.querySelector("#bgColorButton");
 
 let leftBtn = document.querySelector(".left");
 let centerBtn = document.querySelector(".center");
@@ -94,6 +94,7 @@ function handleActiveSheet(e) {
 // => 2. restore formating of resp cell
 for (let i = 0; i < allCells.length; i++) {
 	allCells[i].addEventListener("click", function handleCell() {
+		console.log(sheetDB);
 		let rid = Number(allCells[i].getAttribute("rid"));
 		let cid = Number(allCells[i].getAttribute("cid"));
 
@@ -210,8 +211,9 @@ underlineBtn.addEventListener("click", handleBUI);
 italicBtn.addEventListener("click", handleBUI);
 
 // Font Color and Cell Color
-// fontColorBtn.addEventListener("click", handleColor);
-// cellColorBtn.addEventListener("click", handleColor);
+fontColorBtn.addEventListener("change", handleColor);
+
+cellColorBtn.addEventListener("change", handleColor);
 
 // ====HELPING FUNCTIONS======================================================================================================
 // All Re-Usable Functions (fns which are used above)
@@ -225,6 +227,8 @@ function initUI() {
 		allCells[i].style.fontFamily = "Arial";
 		allCells[i].style.fontSize = "16px";
 		allCells[i].style.textAlign = "left";
+		allCells[i].style.color = "black";
+		allCells[i].style.backgroundColor = "white";
 		allCells[i].innerText = "";
 	}
 }
@@ -237,21 +241,23 @@ function setUI(sheetDB) {
 			let cell = document.querySelector(`.col[rid="${i}"][cid="${j}"]`);
 
 			cell.style.fontWeight = cellData.bold == true ? "bold" : "normal";
-
 			cell.style.fontStyle =
 				cellData.italic == true ? "italic" : "normal";
-
 			cell.style.textDecoration =
 				cellData.underline == true ? "underline" : "none";
 
 			cell.style.fontFamily = cellData.fontFamily;
-
 			cell.style.fontSize = cellData.fontSize + "px";
 
 			cell.style.textAlign = cellData.halign;
 
 			cell.innerText = cellData.value;
-			// console.log(cellData.value);
+
+			cell.style.color = cellData.fontColor;
+			cell.style.backgroundColor = cellData.cellColor;
+
+			// Formula Bar
+			// formulaBarInput.value = cellObject.formula;
 		}
 	}
 }
@@ -326,22 +332,30 @@ function handleBUI(e) {
 }
 
 // Handles color of font and of a cell
-// function handleColor(e) {
-// 	let myClass = e.currentTarget.getAttribute("class");
-// 	console.log(myClass);
+function handleColor(e) {
+	let myClass = e.currentTarget.classList[0];
 
-// 	let address = addressBar.value;
-// 	let { rid, cid } = getRIdCIdfromAddress(address);
-// 	let cellElem = document.querySelector(`.col[rid="${rid}"][cid="${cid}"]`);
+	let address = addressBar.value;
+	let { rid, cid } = getRIdCIdfromAddress(address);
+	let cellElem = document.querySelector(`.col[rid="${rid}"][cid="${cid}"]`);
+	let cellObject = sheetDB[rid][cid];
 
-// 	if (myClass == "color") {
-// 		let fontColor = document.getElementById("fontColorButton").value;
-// 		cellElem.style.color = fontColor;
-// 	} else {
-// 		let cellColor = document.getElementById("bgColorButton").value;
-// 		cellElem.style.backgroundColor = cellColor;
-// 	}
-// }
+
+	console.log(myClass);
+	if (myClass == "color") {
+		let fontColor = fontColorBtn.value;
+		cellElem.style.color = fontColor;
+
+		// Updating our temporary DB
+		cellObject.fontColor = fontColor;
+	} else {
+		let cellBgColor = cellColorBtn.value;
+		cellElem.style.backgroundColor = cellBgColor;
+
+		// Updating our temporary DB
+		cellObject.cellColor = cellBgColor;
+	}
+}
 
 // Handles font family of selected cell
 function handleFontFamily(e) {
@@ -390,60 +404,60 @@ function getRIdCIdfromAddress(address) {
 	//BUI
 	boldBtn.addEventListener("mouseover", function () {
 		boldBtn.classList.add("hover-active-btn");
-	})
+	});
 	boldBtn.addEventListener("mouseout", function () {
 		boldBtn.classList.remove("hover-active-btn");
-	})
+	});
 
 	underlineBtn.addEventListener("mouseover", function () {
 		underlineBtn.classList.add("hover-active-btn");
-	})
+	});
 	underlineBtn.addEventListener("mouseout", function () {
 		underlineBtn.classList.remove("hover-active-btn");
-	})
+	});
 
 	italicBtn.addEventListener("mouseover", function () {
 		italicBtn.classList.add("hover-active-btn");
-	})
+	});
 	italicBtn.addEventListener("mouseout", function () {
 		italicBtn.classList.remove("hover-active-btn");
-	})
+	});
 
 	// COLORS
 	fontColorBtn.addEventListener("mouseover", function () {
 		fontColorBtn.classList.add("hover-active-btn");
-	})
+	});
 	fontColorBtn.addEventListener("mouseout", function () {
 		fontColorBtn.classList.remove("hover-active-btn");
-	})
+	});
 
 	cellColorBtn.addEventListener("mouseover", function () {
 		cellColorBtn.classList.add("hover-active-btn");
-	})
+	});
 	cellColorBtn.addEventListener("mouseout", function () {
 		cellColorBtn.classList.remove("hover-active-btn");
-	})
+	});
 
 	// ALIGNMENT
 	leftBtn.addEventListener("mouseover", function () {
 		leftBtn.classList.add("hover-active-btn");
-	})
+	});
 	leftBtn.addEventListener("mouseout", function () {
 		leftBtn.classList.remove("hover-active-btn");
-	})
+	});
 	centerBtn.addEventListener("mouseover", function () {
 		centerBtn.classList.add("hover-active-btn");
-	})
+	});
 	centerBtn.addEventListener("mouseout", function () {
 		centerBtn.classList.remove("hover-active-btn");
-	})
-	
+	});
+
 	rightBtn.addEventListener("mouseover", function () {
 		rightBtn.classList.add("hover-active-btn");
-	})
+	});
 	rightBtn.addEventListener("mouseout", function () {
 		rightBtn.classList.remove("hover-active-btn");
-	})
+	});
 
 	// FONT FAMILY AND COLOR
 	// fontFamilyElem.addEventListener("mouseover", function () {

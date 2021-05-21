@@ -5,6 +5,7 @@ let input = document.querySelector(".inputButton");
 
 save.addEventListener("click", function () {
 	const data = JSON.stringify(sheetDB);
+	console.log(data);
 	// blob
 	// excel -> npm xlsx hw
 	const blob = new Blob([data], { type: "application/json" }); // converts data to file of this type
@@ -29,13 +30,17 @@ input.addEventListener("change", function () {
 
 	fr.addEventListener("load", function () {
 		let data = fr.result;
+		console.log(JSON.parse(data));
 		// let newWorkDB = XLSX.read(data, { type: "binary" });
 
 		let activeSheet = document.querySelector(".active-sheet");
 		let sheetIdx = activeSheet.getAttribute("sheetidx") - 1;
 
 		let openSheet = JSON.parse(data);
+		sheetDB = openSheet;
 		workSheetDb[sheetIdx] = openSheet;
+		// console.log(openSheet);
+		// console.log(workSheetDb[sheetIdx]);
 		setUI(openSheet);
 	});
 });
@@ -66,6 +71,8 @@ function cleanSheetDB() {
 				value: "",
 				children: [],
 				formula: "",
+				fontColor: "black",
+				cellColor: "white",
 			};
 			row.push(cell);
 		}
@@ -75,26 +82,25 @@ function cleanSheetDB() {
 }
 
 //Adding hover effect
-(function hoverEffect() {
-	clear.addEventListener("mouseover", function () {
-		console.log("hd");
-		clear.classList.add("hover-active-btn");
-	})
-	clear.addEventListener("mouseout", function () {
-		clear.classList.remove("hover-active-btn");
-	})
+// (function hoverEffect() {
+// 	clear.addEventListener("mouseover", function () {
+// 		clear.classList.add("hover-active-btn");
+// 	})
+// 	clear.addEventListener("mouseout", function () {
+// 		clear.classList.remove("hover-active-btn");
+// 	})
 	
-	open.addEventListener("mouseover", function () {
-		open.classList.add("hover-active-btn");
-	})
-	open.addEventListener("mouseout", function () {
-		open.classList.remove("hover-active-btn");
-	})
+// 	open.addEventListener("mouseover", function () {
+// 		open.classList.add("hover-active-btn");
+// 	})
+// 	open.addEventListener("mouseout", function () {
+// 		open.classList.remove("hover-active-btn");
+// 	})
 	
-	save.addEventListener("mouseover", function () {
-		save.classList.add("hover-active-btn");
-	})
-	save.addEventListener("mouseout", function () {
-		save.classList.remove("hover-active-btn");
-	})
-})();
+// 	save.addEventListener("mouseover", function () {
+// 		save.classList.add("hover-active-btn");
+// 	})
+// 	save.addEventListener("mouseout", function () {
+// 		save.classList.remove("hover-active-btn");
+// 	})
+// })();
