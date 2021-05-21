@@ -94,7 +94,6 @@ function handleActiveSheet(e) {
 // => 2. restore formating of resp cell
 for (let i = 0; i < allCells.length; i++) {
 	allCells[i].addEventListener("click", function handleCell() {
-		console.log(sheetDB);
 		let rid = Number(allCells[i].getAttribute("rid"));
 		let cid = Number(allCells[i].getAttribute("cid"));
 
@@ -155,6 +154,16 @@ for (let i = 0; i < allCells.length; i++) {
 		// Formula Bar
 		formulaBarInput.value = cellObject.formula;
 	});
+	allCells[i].addEventListener("blur",function(){
+		let rid = Number(allCells[i].getAttribute("rid"));
+		let cid = Number(allCells[i].getAttribute("cid"));
+
+		// Acc. to cell's prev state, update all Btns state
+		let cellObject = sheetDB[rid][cid];
+
+		cellObject.value = allCells[i].innerText;
+
+	})
 
 	// Increase height of left col's resp. cell's height acc. to the text in it
 	allCells[i].addEventListener("keydown", function (e) {
