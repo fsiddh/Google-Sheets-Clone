@@ -28,7 +28,7 @@
 
 
 ## Related Links:
-Project Video Link: ... <br />
+Project Video Link: https://www.linkedin.com/posts/falansh-siddh_html-css-javascript-activity-6801895147249377280-1bh6 <br />
 Live Link: https://fsiddh.github.io/Google-Sheets-Clone/
 
 ###### Email: falansh.rs@gmail.com
