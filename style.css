@@ -8,6 +8,10 @@ body {
 	color: rgb(44, 44, 44);
 }
 
+option {
+	font-family: var(--font);
+}
+
 .menu-container {
 	background-color: lightblue;
 	height: 80px;
@@ -207,7 +211,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 6%;
+	width: 8%;
 }
 .font-family {
 	display: flex;
