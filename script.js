@@ -11,8 +11,10 @@ let boldBtn = document.querySelector(".bold");
 let underlineBtn = document.querySelector(".underline");
 let italicBtn = document.querySelector(".italic");
 
-let fontColorBtn = document.querySelector("#fontColorButton");
-let cellColorBtn = document.querySelector("#bgColorButton");
+let fontColorInputBtn = document.querySelector("#fontColorButton");
+let cellColorInputBtn = document.querySelector("#bgColorButton");
+let fontColorBtn = document.querySelector("#hoverOnFontColorBtn");
+let cellColorBtn = document.querySelector("#hoverOnCellColorBtn");
 
 let leftBtn = document.querySelector(".left");
 let centerBtn = document.querySelector(".center");
@@ -220,9 +222,9 @@ underlineBtn.addEventListener("click", handleBUI);
 italicBtn.addEventListener("click", handleBUI);
 
 // Font Color and Cell Color
-fontColorBtn.addEventListener("change", handleColor);
+fontColorInputBtn.addEventListener("change", handleColor);
 
-cellColorBtn.addEventListener("change", handleColor);
+cellColorInputBtn.addEventListener("change", handleColor);
 
 // ====HELPING FUNCTIONS======================================================================================================
 // All Re-Usable Functions (fns which are used above)
@@ -351,13 +353,13 @@ function handleColor(e) {
 
 	console.log(myClass);
 	if (myClass == "color") {
-		let fontColor = fontColorBtn.value;
+		let fontColor = fontColorInputBtn.value;
 		cellElem.style.color = fontColor;
 
 		// Updating our temporary DB
 		cellObject.fontColor = fontColor;
 	} else {
-		let cellBgColor = cellColorBtn.value;
+		let cellBgColor = cellColorInputBtn.value;
 		cellElem.style.backgroundColor = cellBgColor;
 
 		// Updating our temporary DB

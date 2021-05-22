@@ -82,26 +82,26 @@ function cleanSheetDB() {
 	return newSheetDB;
 }
 
-//Adding hover effect
-// (function hoverEffect() {
-// 	clear.addEventListener("mouseover", function () {
-// 		clear.classList.add("hover-active-btn");
-// 	})
-// 	clear.addEventListener("mouseout", function () {
-// 		clear.classList.remove("hover-active-btn");
-// 	})
+// Adding hover effect
+(function hoverEffect() {
+	clear.addEventListener("mouseover", function () {
+		clear.classList.add("hover-active-btn");
+	})
+	clear.addEventListener("mouseout", function () {
+		clear.classList.remove("hover-active-btn");
+	})
 	
-// 	open.addEventListener("mouseover", function () {
-// 		open.classList.add("hover-active-btn");
-// 	})
-// 	open.addEventListener("mouseout", function () {
-// 		open.classList.remove("hover-active-btn");
-// 	})
+	open.addEventListener("mouseover", function () {
+		open.classList.add("hover-active-btn");
+	})
+	open.addEventListener("mouseout", function () {
+		open.classList.remove("hover-active-btn");
+	})
 	
-// 	save.addEventListener("mouseover", function () {
-// 		save.classList.add("hover-active-btn");
-// 	})
-// 	save.addEventListener("mouseout", function () {
-// 		save.classList.remove("hover-active-btn");
-// 	})
-// })();
+	save.addEventListener("mouseover", function () {
+		save.classList.add("hover-active-btn");
+	})
+	save.addEventListener("mouseout", function () {
+		save.classList.remove("hover-active-btn");
+	})
+})();
