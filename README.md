@@ -13,7 +13,7 @@
 - Formatting - font, size, bold, italic, underline, color, background color, position.
 - Adding Multiple sheets
 
-<img src="img/default.PNG" height="100px" width="100px" >
+<img src="img/default.PNG" height="600px" width="1000px" >
 
 # 🚀 Technical Stack:
 
@@ -23,13 +23,13 @@
 
 
 ### Screenshots
-<img src="https://user-images.githubusercontent.com/example.png" height="100px" width="100px"   > 
-<img src="https://user-images.githubusercontent.com/5example.png" height="100px" width="100px"  >
+<img src="img/cycleDetected.PNG" height="400px" width="800px"    > 
+<img src="img/feautures.PNG" height="400px" width="800px"   align = "center">
 
 
 ## Related Links:
 Project Video Link: ... <br />
-Live Link: ...
+Live Link: https://fsiddh.github.io/Google-Sheets-Clone/
 
 ###### Email: falansh.rs@gmail.com
 
