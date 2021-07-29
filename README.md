@@ -26,6 +26,14 @@
 <img src="img/cycleDetected.PNG" height="400px" width="800px"    > 
 <img src="img/feautures.PNG" height="400px" width="800px"   align = "center">
 
+### Preview
+
+
+
+https://user-images.githubusercontent.com/56497318/127530625-9c2da4f7-086c-4f17-a730-9720282d0760.mp4
+
+
+
 
 ## Related Links:
 Project Video Link: https://www.linkedin.com/posts/falansh-siddh_html-css-javascript-activity-6801895147249377280-1bh6 <br />
